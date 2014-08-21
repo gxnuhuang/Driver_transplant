@@ -1,0 +1,6 @@
+am335x_evm_init
+	am335x_evm_i2c_init
+		am335x_i2c0_boardinfo
+			am335x_baseboard_eeprom_info
+				am335x_evm_setup
+		 

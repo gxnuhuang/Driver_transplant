@@ -1,0 +1,44 @@
+insmod compat.ko
+insmod cfg80211.ko
+insmod mac80211.ko
+insmod wl12xx_sdio.ko
+insmod wl12xx.ko
+
+
+
+insmod /home/modules/3.2.0\+/updates/compat/compat.ko
+insmod /home/modules/3.2.0+/updates/drivers/net/wireless/ti/wlcore/wlcore_sdio.ko
+insmod /home/modules/3.2.0+/updates/net/wireless/cfg80211.ko
+insmod /home/modules/3.2.0+/updates/net/mac80211/mac80211.ko
+insmod /home/modules/3.2.0+/updates/drivers/net/wireless/ti/wlcore/wlcore.ko
+insmod /home/modules/3.2.0+/updates/drivers/net/wireless/ti/wl12xx/wl12xx.ko
+
+
+sudo cp -arv ./net/mac80211/mac80211.ko /media/gxnuhuang/rootfs/
+sudo cp -arv ./net/wireless/cfg80211.ko /media/gxnuhuang/rootfs/
+sudo cp -arv ./compat/compat.ko /media/gxnuhuang/rootfs/
+sudo cp -arv ./drivers/net/wireless/wl12xx/wl12xx.ko /media/gxnuhuang/rootfs/
+sudo cp -arv ./drivers/net/wireless/wl12xx/wl12xx_sdio.ko /media/gxnuhuang/rootfs/
+
+./drivers/net/wireless/wl12xx/wl12xx_spi.ko
+./drivers/net/wireless/wl1251/wl1251_spi.ko
+./drivers/net/wireless/wl1251/wl1251_sdio.ko
+./drivers/net/wireless/wl1251/wl1251.ko
+
+
+
+modprobe g_multi file=/dev/mmcblk0p1,/dev/mmcblk0p2,/dev/mmcblk0p3,/dev/mmcblk0p4
+setenv bootcmd 'fatload mmc 0 ${kloadaddr} ${bootfile};setenv bootargs console=ttyO0,115200n8 root=/dev/mmcblk0p4 rootfstype=ext4;bootm 0x80007fc0'
+
+setenv bootcmd 'fatload mmc 0 ${kloadaddr} ${bootfile};setenv bootargs console=ttyO0,115200n8 root=/dev/mmcblk0p2 rootfstype=ext3;bootm 0x80007fc0'
+
+bootargs=console=ttyO0,115200n8 root=/dev/mmcblk0p2 mem=128M rootwait
+bootcmd=mmc rescan; fatload mmc 0 0x82000000 uImage; bootm 0x82000000;
+uenvcmd=boot;
+
+
+
+
+
+
+

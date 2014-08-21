@@ -1,0 +1,88 @@
+IRTK2操作记录
+
+默认参数
+setenv bootcmd 'fatload mmc 0 0x80007fc0 ${bootfile};setenv bootargs console=ttyO0,115200n8 root=/dev/mmcblk0p2 ro rootfstype=ext3 rootwait ip=none ;bootm 0x80007fc0'
+
+/mnt/platform/bin/madplay /home/turn_on_music.mp3 
+
+强制禁止wifi进入热点
+touch /var/wifista  这样起来就直接变成客户端，
+
+irtk2固件打包方法
+使用package_bin目录下的文件，将制作好的固件包内容也放在与fwpacker同样的目录中，直接执行fwpacker就行了。
+
+杀掉固件
+killall monitor
+flushirtk.sh
+
+查看wifi热点名字
+hciconfig -a
+在安全模式下安装固件
+mount /dev/mmcblk0p1 /media/mmcblk0p1
+install_fw 
+
+wifi模块加载顺序
+compat
+wlcore_sdio
+cfg80211 
+mac80211
+wlcore
+wl12xx
+
+insmod /lib/modules/3.2.0\+/updates/drivers/net/wireless/ti/wlcore/wlcore_sdio.ko 
+insmod /lib/modules/3.2.0\+/updates/net/wireless/cfg80211.ko
+insmod /lib/modules/3.2.0\+/updates/net/mac80211/mac80211.ko
+insmod  /lib/modules/3.2.0\+/updates/drivers/net/wireless/ti/wlcore/wlcore.ko
+insmod /lib/modules/3.2.0\+/updates/drivers/net/wireless/ti/wl12xx/wl12xx.ko
+
+wifi启动脚本
+/mnt/platform/bin/wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
+wlanhw
+udhcpc -i wlan0 -t 4 -b -q -s /etc/udhcpc.script &
+ifconfig lo 127.0.0.1 up
+
+
+修改固件的文件
+/etc/rcS.d/S99rc.local
+/etc/init.d/loadperipherals.sh
+/etc/init.d/udevd.sh 
+/etc/init.d/rcS
+
+
+/mnt/platform/libexec/udev/udevd --daemon
+/mnt/platform/bin/udevadm trigger --action=add
+
+
+播音
+#/bin/madplay /home/turn_on_music.mp3 -o wav:- | aplay &
+
+
+modprobe wl12xx
+
+固件升级失败
+/mnt/platform/var/debug
+
+
+打包文件系统
+sudo mkfs.cramfs irtk_fs cramfs.img
+
+
+
+
+
+优先级设置
+udev 10是可以播的
+5 OK
+
+2 不行
+
+
+Use mdev replace udev ,Have tested the audio, wifi, bluetooth, buttons and they can works
+rootfs:
+1 modify "/bin/busybox" to support mdev
+2 modify "/etc/init.d/rcS" to use mdev
+3 add "etc/mdev.conf" for mdev
+platform:
+1 modify "/etc/init.d/loadperipherals.sh" for "mdev" and ignore "udev"
+
+

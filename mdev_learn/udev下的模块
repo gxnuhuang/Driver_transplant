@@ -1,0 +1,26 @@
+rfcomm 26886 5 - Live 0xbf123000 (O)
+bnep 8920 2 - Live 0xbf11c000 (O)
+hci_uart 13250 1 - Live 0xbf114000 (O)
+bluetooth 159080 13 rfcomm,bnep,hci_uart, Live 0xbf0e1000 (O)
+wl12xx 14129 0 - Live 0xbf0d9000 (O)
+wlcore 103536 1 wl12xx, Live 0xbf0b5000 (O)
+gpio_en 701 0 - Live 0xbf0b1000 (O)
+mac80211 235169 1 wlcore, Live 0xbf064000 (O)
+cfg80211 168724 2 wlcore,mac80211, Live 0xbf02a000 (O)
+g_multi 59058 0 - Live 0xbf013000
+mma8x5x 4700 0 - Live 0xbf00e000
+wlcore_sdio 3250 0 - Live 0xbf006000 (O)
+compat 6969 8 rfcomm,bnep,hci_uart,bluetooth,wl12xx,mac80211,cfg80211,wlcore_sdio, Live 0xbf000000 (O)
+
+
+
+/sys/class下的目录
+bdi          hwmon        mbox         ppp          scsi_host    vc
+block        i2c-adapter  mdio_bus     regulator    sound        vtconsole
+bluetooth    i2c-dev      mem          rfkill       spi_master
+display      ieee80211    misc         rtc          tty
+firmware     input        mmc_host     scsi_device  udc
+gpio         leds         net          scsi_disk    usb_device
+
+/sys/class/net/下的目录
+eth0       eth1       lo         mon.wlan0  usb0       wlan0

@@ -1,0 +1,44 @@
+./lib/modules/3.2.0+/updates/drivers/net/wireless/ti/wlcore/wlcore_sdio.ko --compat
+./lib/modules/3.2.0+/updates/drivers/net/wireless/ti/wl12xx/wl12xx.ko --wlcore,compat
+./lib/modules/3.2.0+/updates/drivers/net/wireless/ti/wlcore/wlcore.ko --cfg80211,mac80211
+./lib/modules/3.2.0+/updates/net/mac80211/mac80211.ko --cfg80211,compat
+./lib/modules/3.2.0+/updates/net/wireless/cfg80211.ko --compat 
+
+
+
+
+insmod /home/wifi/lib/modules/3.2.0\+/updates/compat/compat.ko
+insmod /home/wifi/lib/modules/3.2.0+/updates/drivers/net/wireless/ti/wlcore/wlcore_sdio.ko
+insmod /home/wifi/lib/modules/3.2.0+/updates/net/wireless/cfg80211.ko
+insmod /home/wifi/lib/modules/3.2.0+/updates/net/mac80211/mac80211.ko
+insmod /home/wifi/lib/modules/3.2.0+/updates/drivers/net/wireless/ti/wlcore/wlcore.ko
+insmod /home/wifi/lib/modules/3.2.0+/updates/drivers/net/wireless/ti/wl12xx/wl12xx.ko
+
+
+
+insmod /home/modules/3.2.0\+/updates/compat/compat.ko
+insmod /home/modules/3.2.0+/updates/drivers/net/wireless/ti/wlcore/wlcore_sdio.ko
+insmod /home/modules/3.2.0+/updates/net/wireless/cfg80211.ko
+insmod /home/modules/3.2.0+/updates/net/mac80211/mac80211.ko
+insmod /home/modules/3.2.0+/updates/drivers/net/wireless/ti/wlcore/wlcore.ko
+insmod /home/modules/3.2.0+/updates/drivers/net/wireless/ti/wl12xx/wl12xx.ko
+
+insmod compat.ko
+insmod 
+insmod /home/modules/3.2.0+/updates/net/wireless/cfg80211.ko
+insmod /home/modules/3.2.0+/updates/net/mac80211/mac80211.ko
+./net/mac80211/mac80211.ko
+./net/wireless/cfg80211.ko
+./compat/compat.ko
+./drivers/net/wireless/wl12xx/wl12xx.ko
+./drivers/net/wireless/wl12xx/wl12xx_sdio.ko
+
+
+mount -t ext4 /dev/mmcblk0p4 /mylib/
+insmod /mylib/lib/modules/3.2.0\+/kernel/drivers/bt_enable/gpio_en.ko
+insmod /mylib/lib/modules/3.2.0\+/updates/compat/compat.ko
+insmod /mylib/lib/modules/3.2.0+/updates/drivers/net/wireless/ti/wlcore/wlcore_sdio.ko
+insmod /mylib/lib/modules/3.2.0+/updates/net/wireless/cfg80211.ko
+insmod /mylib/lib/modules/3.2.0+/updates/net/mac80211/mac80211.ko
+insmod /mylib/lib/modules/3.2.0+/updates/drivers/net/wireless/ti/wlcore/wlcore.ko
+insmod /mylib/lib/modules/3.2.0+/updates/drivers/net/wireless/ti/wl12xx/wl12xx.ko

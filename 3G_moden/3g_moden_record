@@ -1,0 +1,16 @@
+编译方法
+直接修改Makefile的内容，直接运行所创建build.sh
+MODULE_ROOT :=/home/gxnuhuang/3Gmodem/src
+BUILDDIR   :=/home/gxnuhuang/3Gmodem/src
+
+将其整合到内核源码中，直接复制sierra.c覆盖掉内核drivers中原来的sierra.c文件。
+
+
+flushirtk.sh   //杀掉进程
+/dev/ttyO5 硬件串口
+insmod /lib/modules/3.2.0\+/kernel/drivers/sierra.ko
+
+
+Bus 001 Device 001: ID 1d6b:0002
+Bus 002 Device 001: ID 1d6b:0002
+Bus 001 Device 003: ID 1199:683c

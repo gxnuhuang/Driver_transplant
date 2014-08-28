@@ -1,0 +1,116 @@
+[    0.043243] hzq:drver name is dummy
+[    0.070312] hzq:drver name is tps65910
+[    0.070465] hzq:drver name is twl
+[    0.342620] hzq:drver name is at24
+[    0.348022] hzq: i2c2_init in
+[    0.407775] hzq:drver name is lm75
+[    0.601837] hzq:  st_magn_i2c_init
+[    0.605407] hzq:drver name is st_magn_i2c
+[    0.609710] hzq: has st_magn_i2c_probe
+[    0.613708] hzq:st_magn_common_probe
+[    0.617980] hzq:st_magn_common_probe st_sensors_check_device_support succesfule 
+[    0.625854] Unable to handle kernel NULL pointer dereference at virtual address 00000000
+[    0.634399] pgd = c0004000
+[    0.637237] [00000000] *pgd=00000000
+[    0.641021] Internal error: Oops: 5 [#1]
+[    0.645172] Modules linked in:
+[    0.648376] CPU: 0    Not tainted  (3.2.0+ #26)
+[    0.653198] PC is at st_sensors_init_sensor+0x24/0x110
+[    0.658599] LR is at st_sensors_init_sensor+0x24/0x110
+[    0.664031] pc : [<c0271b4c>]    lr : [<c0271b4c>]    psr: 60000013
+[    0.664031] sp : c701de30  ip : c701de30  fp : c701de44
+[    0.676116] r10: c04a58e4  r9 : 00000000  r8 : 00000000
+[    0.681610] r7 : c01d39d0  r6 : 00000000  r5 : 00000000  r4 : c4a06800
+[    0.688507] r3 : c4a06a84  r2 : 00000001  r1 : c044c581  r0 : c4a06a80
+[    0.695373] Flags: nZCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment kernel
+[    0.703094] Control: 10c5387d  Table: 80004019  DAC: 00000015
+[    0.709136] Process swapper (pid: 1, stack limit = 0xc701c2f0)
+[    0.715270] Stack: (0xc701de30 to 0xc701e000)
+[    0.719879] de20:                                     c4a06800 00000001 c701de64 c701de48
+[    0.728515] de40: c027205c c0271b34 c02712ec c49c0000 c4a06800 c49c0020 c701de84 c701de68
+[    0.737121] de60: c027235c c0271fd4 c027230c c49c0000 c05017f0 c05017f0 c701de9c c701de88
+[    0.745758] de80: c0245924 c0272318 c49c0020 c49c0054 c701debc c701dea0 c01d38f4 c02458b0
+[    0.754364] dea0: 00000000 c49c0020 c49c0054 c05017f0 c701dedc c701dec0 c01d3a40 c01d3840
+[    0.763000] dec0: c70068f4 00000000 c701dee0 c05017f0 c701df04 c701dee0 c01d2810 c01d39dc
+[    0.771636] dee0: c70068f8 c49b93f0 c05017f0 c49f5240 c0039b38 c04ff484 c701df14 c701df08
+[    0.780242] df00: c01d3584 c01d27c8 c701df44 c701df18 c01d31a8 c01d3570 c044c6dd c701df28
+[    0.788879] df20: c05017f0 00000000 c0039b38 00000013 00000000 c04a58e4 c701df6c c701df48
+[    0.797515] df40: c01d3f44 c01d30e0 c05017c8 00000000 c0039b38 00000013 00000000 c04a58e4
+[    0.806121] df60: c701df84 c701df70 c02475ac c01d3ea8 c04b6310 c04b6410 c701df94 c701df88
+[    0.814758] df80: c04a5908 c0247514 c701dfd4 c701df98 c0008690 c04a58f0 00000037 00000000
+[    0.823394] dfa0: c701dfbc 0000018b c04e6960 c04b6310 c04b6410 c0039b38 00000013 00000000
+[    0.832000] dfc0: 00000000 00000000 c701dff4 c701dfd8 c0485884 c0008600 00000000 00000000
+[    0.840637] dfe0: 00000000 c0485800 00000000 c701dff8 c0039b38 c048580c 14b75155 94509161
+[    0.849243] Backtrace: 
+[    0.851837] [<c0271b28>] (st_sensors_init_sensor+0x0/0x110) from [<c027205c>] (st_magn_common_probe+0x94/0x13c)
+[    0.862457]  r5:00000001 r4:c4a06800
+[    0.866241] [<c0271fc8>] (st_magn_common_probe+0x0/0x13c) from [<c027235c>] (st_magn_i2c_probe+0x50/0x68)
+[    0.876342]  r6:c49c0020 r5:c4a06800 r4:c49c0000 r3:c02712ec
+[    0.882324] [<c027230c>] (st_magn_i2c_probe+0x0/0x68) from [<c0245924>] (i2c_device_probe+0x80/0xa8)
+[    0.891937]  r6:c05017f0 r5:c05017f0 r4:c49c0000 r3:c027230c
+[    0.897949] [<c02458a4>] (i2c_device_probe+0x0/0xa8) from [<c01d38f4>] (driver_probe_device+0xc0/0x19c)
+[    0.907836]  r5:c49c0054 r4:c49c0020
+[    0.911621] [<c01d3834>] (driver_probe_device+0x0/0x19c) from [<c01d3a40>] (__driver_attach+0x70/0x94)
+[    0.921447]  r6:c05017f0 r5:c49c0054 r4:c49c0020 r3:00000000
+[    0.927429] [<c01d39d0>] (__driver_attach+0x0/0x94) from [<c01d2810>] (bus_for_each_dev+0x54/0x9c)
+[    0.936859]  r6:c05017f0 r5:c701dee0 r4:00000000 r3:c70068f4
+[    0.942871] [<c01d27bc>] (bus_for_each_dev+0x0/0x9c) from [<c01d3584>] (driver_attach+0x20/0x28)
+[    0.952117]  r7:c04ff484 r6:c0039b38 r5:c49f5240 r4:c05017f0
+[    0.958099] [<c01d3564>] (driver_attach+0x0/0x28) from [<c01d31a8>] (bus_add_driver+0xd4/0x23c)
+[    0.967285] [<c01d30d4>] (bus_add_driver+0x0/0x23c) from [<c01d3f44>] (driver_register+0xa8/0x12c)
+[    0.976745] [<c01d3e9c>] (driver_register+0x0/0x12c) from [<c02475ac>] (i2c_register_driver+0xa4/0xcc)
+[    0.986572] [<c0247508>] (i2c_register_driver+0x0/0xcc) from [<c04a5908>] (st_magn_i2c_init+0x24/0x34)
+[    0.996368]  r5:c04b6410 r4:c04b6310
+[    1.000152] [<c04a58e4>] (st_magn_i2c_init+0x0/0x34) from [<c0008690>] (do_one_initcall+0x9c/0x16c)
+[    1.009704] [<c00085f4>] (do_one_initcall+0x0/0x16c) from [<c0485884>] (kernel_init+0x84/0x120)
+[    1.018890] [<c0485800>] (kernel_init+0x0/0x120) from [<c0039b38>] (do_exit+0x0/0x5f8)
+[    1.027252]  r5:c0485800 r4:00000000
+[    1.031005] Code: e1a04000 e59f10e0 e2800d0a ebf77d6d (e5d53000) 
+[    1.037506] ---[ end trace ef777edab55adf25 ]---
+[    1.042388] Kernel panic - not syncing: Attempted to kill init!
+[    1.048645] Backtrace: 
+[    1.051269] [<c00166e4>] (dump_backtrace+0x0/0x10c) from [<c034c1c0>] (dump_stack+0x18/0x1c)
+[    1.060150]  r6:c04db2b4 r5:c04db2b4 r4:c050ba88 r3:60000113
+[    1.066162] [<c034c1a8>] (dump_stack+0x0/0x1c) from [<c034c3a4>] (panic+0x5c/0x18c)
+[    1.074249] [<c034c348>] (panic+0x0/0x18c) from [<c0039bc0>] (do_exit+0x88/0x5f8)
+[    1.082122]  r3:c701bd24 r2:c701bc00 r1:00000001 r0:c041f14b
+[    1.088104]  r7:00000001
+[    1.090789] [<c0039b38>] (do_exit+0x0/0x5f8) from [<c0016b28>] (die+0x284/0x2d8)
+[    1.098602]  r7:00000000
+[    1.101287] [<c00168a4>] (die+0x0/0x2d8) from [<c034c220>] (__do_kernel_fault.part.4+0x5c/0x7c)
+[    1.110473] [<c034c1c4>] (__do_kernel_fault.part.4+0x0/0x7c) from [<c0018f9c>] (do_page_fault+0x1e4/0x1fc)
+[    1.120666]  r7:c701bc00 r3:c701dde8
+[    1.124450] [<c0018db8>] (do_page_fault+0x0/0x1fc) from [<c0019060>] (do_translation_fault+0x24/0xa4)
+[    1.134185] [<c001903c>] (do_translation_fault+0x0/0xa4) from [<c0008380>] (do_DataAbort+0x3c/0xa0)
+[    1.143737]  r7:c701dde8 r6:00000000 r5:c04be7e4 r4:00000005
+[    1.149749] [<c0008344>] (do_DataAbort+0x0/0xa0) from [<c0012c98>] (__dabt_svc+0x38/0x60)
+[    1.158355] Exception stack(0xc701dde8 to 0xc701de30)
+[    1.163696] dde0:                   c4a06a80 c044c581 00000001 c4a06a84 c4a06800 00000000
+[    1.172332] de00: 00000000 c01d39d0 00000000 00000000 c04a58e4 c701de44 c701de30 c701de30
+[    1.180969] de20: c0271b4c c0271b4c 60000013 ffffffff
+[    1.186279]  r7:c701de1c r6:ffffffff r5:60000013 r4:c0271b4c
+[    1.192291] [<c0271b28>] (st_sensors_init_sensor+0x0/0x110) from [<c027205c>] (st_magn_common_probe+0x94/0x13c)
+[    1.202941]  r5:00000001 r4:c4a06800
+[    1.206726] [<c0271fc8>] (st_magn_common_probe+0x0/0x13c) from [<c027235c>] (st_magn_i2c_probe+0x50/0x68)
+[    1.216827]  r6:c49c0020 r5:c4a06800 r4:c49c0000 r3:c02712ec
+[    1.222839] [<c027230c>] (st_magn_i2c_probe+0x0/0x68) from [<c0245924>] (i2c_device_probe+0x80/0xa8)
+[    1.232452]  r6:c05017f0 r5:c05017f0 r4:c49c0000 r3:c027230c
+[    1.238464] [<c02458a4>] (i2c_device_probe+0x0/0xa8) from [<c01d38f4>] (driver_probe_device+0xc0/0x19c)
+[    1.248352]  r5:c49c0054 r4:c49c0020
+[    1.252166] [<c01d3834>] (driver_probe_device+0x0/0x19c) from [<c01d3a40>] (__driver_attach+0x70/0x94)
+[    1.261962]  r6:c05017f0 r5:c49c0054 r4:c49c0020 r3:00000000
+[    1.267974] [<c01d39d0>] (__driver_attach+0x0/0x94) from [<c01d2810>] (bus_for_each_dev+0x54/0x9c)
+[    1.277435]  r6:c05017f0 r5:c701dee0 r4:00000000 r3:c70068f4
+[    1.283416] [<c01d27bc>] (bus_for_each_dev+0x0/0x9c) from [<c01d3584>] (driver_attach+0x20/0x28)
+[    1.292694]  r7:c04ff484 r6:c0039b38 r5:c49f5240 r4:c05017f0
+[    1.298675] [<c01d3564>] (driver_attach+0x0/0x28) from [<c01d31a8>] (bus_add_driver+0xd4/0x23c)
+[    1.307861] [<c01d30d4>] (bus_add_driver+0x0/0x23c) from [<c01d3f44>] (driver_register+0xa8/0x12c)
+[    1.317352] [<c01d3e9c>] (driver_register+0x0/0x12c) from [<c02475ac>] (i2c_register_driver+0xa4/0xcc)
+[    1.327178] [<c0247508>] (i2c_register_driver+0x0/0xcc) from [<c04a5908>] (st_magn_i2c_init+0x24/0x34)
+[    1.336975]  r5:c04b6410 r4:c04b6310
+[    1.340759] [<c04a58e4>] (st_magn_i2c_init+0x0/0x34) from [<c0008690>] (do_one_initcall+0x9c/0x16c)
+[    1.350341] [<c00085f4>] (do_one_initcall+0x0/0x16c) from [<c0485884>] (kernel_init+0x84/0x120)
+[    1.359527] [<c0485800>] (kernel_init+0x0/0x120) from [<c0039b38>] (do_exit+0x0/0x5f8)
+[    1.367889]  r5:c0485800 r4:00000000
+
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7

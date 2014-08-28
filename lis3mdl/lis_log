@@ -1,0 +1,402 @@
+[    0.000000] Linux version 3.2.0+ (gxnuhuang@fly) (gcc version 4.7.3 20130328 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.04-20130415 - Linaro GCC 2013.04) ) #24
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine: am335xevm
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] On node 0 totalpages: 32768
+[    0.000000] free_area_init_node: node 0, pgdat c0508a10, node_mem_map c0533000
+[    0.000000]   Normal zone: 256 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 32512 pages, LIFO batch:7
+[    0.000000] AM335X ES1.0 (neon )
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line: console=ttyO0,115200n8 lpj=3590144 quiet root=/dev/ram rw initrd=0x81600000,32MB rootfstype=cramfs ip=none
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Memory: 128MB = 128MB total
+[    0.000000] Memory: 91816k/91816k available, 39256k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xc8800000 - 0xff000000   ( 872 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc0485000   (4596 kB)
+[    0.000000]       .init : 0xc0485000 - 0xc04b7000   ( 200 kB)
+[    0.000000]       .data : 0xc04b8000 - 0xc0509100   ( 325 kB)
+[    0.000000]        .bss : 0xc0509124 - 0xc0532f14   ( 168 kB)
+[    0.000000] NR_IRQS:396
+[    0.000000] IRQ: Found an INTC at 0xfa200000 (revision 5.0) with 128 interrupts
+[    0.000000] Total of 128 interrupts on 1 active controller
+[    0.000000] OMAP clockevent source: GPTIMER2 at 24000000 Hz
+[    0.000000] OMAP clocksource: GPTIMER1 at 32768 Hz
+[    0.000000] sched_clock: 32 bits at 32kHz, resolution 30517ns, wraps every 131071999ms
+[    0.000000] Console: colour dummy device 80x30
+[    0.000122] Calibrating delay loop (skipped) preset value.. 718.02 BogoMIPS (lpj=3590144)
+[    0.000122] pid_max: default: 32768 minimum: 301
+[    0.000244] Security Framework initialized
+[    0.000305] Mount-cache hash table entries: 512
+[    0.000701] CPU: Testing write buffer coherency: ok
+[    0.001464] devtmpfs: initialized
+[    0.021453] omap_hwmod: gfx: failed to hardreset
+[    0.037750] omap_hwmod: pruss: failed to hardreset
+[    0.038818] print_constraints: dummy: 
+[    0.039215] NET: Registered protocol family 16
+[    0.041412] OMAP GPIO hardware version 0.1
+[    0.043243] hzq:drver name is dummy
+[    0.043853] omap_mux_init: Add partition: #1: core, flags: 0
+[    0.045776]  omap_i2c.1: alias fck already exists
+[    0.046661]  omap2_mcspi.1: alias fck already exists
+[    0.046905]  omap2_mcspi.2: alias fck already exists
+[    0.047882]  edma.0: alias fck already exists
+[    0.047912]  edma.0: alias fck already exists
+[    0.047943]  edma.0: alias fck already exists
+[    0.069488] bio: create slab <bio-0> at 0
+[    0.070404] hzq:drver name is tps65910
+[    0.070556] hzq:drver name is twl
+[    0.071380] SCSI subsystem initialized
+[    0.071868] omap2_mcspi omap2_mcspi.1: registered master spi1
+[    0.072204] omap2_mcspi omap2_mcspi.2: registered master spi2
+[    0.073089] usbcore: registered new interface driver usbfs
+[    0.073425] usbcore: registered new interface driver hub
+[    0.073638] usbcore: registered new device driver usb
+[    0.073760] musb-ti81xx musb-ti81xx: musb0, board_mode=0x13, plat_mode=0x3
+[    0.074066] musb-ti81xx musb-ti81xx: musb1, board_mode=0x13, plat_mode=0x1
+[    0.075256] omap_i2c omap_i2c.1: bus 1 rev2.4.0 at 100 kHz
+[    0.076599] tps65910 1-002d: JTAGREVNUM 0x0
+[    0.079010] print_constraints: VRTC: 
+[    0.080444] print_constraints: VIO: at 1500 mV 
+[    0.082763] print_constraints: VDD1: 600 <--> 1500 mV at 1262 mV normal 
+[    0.085052] print_constraints: VDD2: 600 <--> 1500 mV at 1137 mV normal 
+[    0.086059] print_constraints: VDD3: 5000 mV 
+[    0.087463] print_constraints: VDIG1: at 1800 mV 
+[    0.088867] print_constraints: VDIG2: at 1800 mV 
+[    0.090301] print_constraints: VPLL: at 1800 mV 
+[    0.091705] print_constraints: VDAC: at 1800 mV 
+[    0.093139] print_constraints: VAUX1: at 1800 mV 
+[    0.094543] print_constraints: VAUX2: at 3300 mV 
+[    0.095947] print_constraints: VAUX33: at 3300 mV 
+[    0.097351] print_constraints: VMMC: at 3300 mV 
+[    0.097839] tps65910 1-002d: No interrupt support, no core IRQ
+[    0.099334] Advanced Linux Sound Architecture Driver Version 1.0.24.
+[    0.100616] Switching to clocksource gp timer
+[    0.120269] musb-hdrc: version 6.0, ?dma?, otg (peripheral+host)
+[    0.120452] musb-hdrc musb-hdrc.0: dma type: pio
+[    0.120880] MUSB0 controller's USBSS revision = 4ea20800
+[    0.120910] musb-hdrc: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx, HB-ISO Tx, SoftConn)
+[    0.120941] musb-hdrc: MHDRC RTL version 2.0 
+[    0.120941] musb-hdrc: setup fifo_mode 4
+[    0.120971] musb-hdrc: 28/31 max ep, 16384/16384 memory
+[    0.121002] musb-hdrc.0: bulk split disabled
+[    0.121002] musb-hdrc.0: bulk combine disabled
+[    0.121551] musb-hdrc musb-hdrc.0: USB OTG mode controller at c883c000 using PIO, IRQ 18
+[    0.121704] musb-hdrc musb-hdrc.1: dma type: pio
+[    0.122009] MUSB1 controller's USBSS revision = 4ea20800
+[    0.122039] musb-hdrc: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx, HB-ISO Tx, SoftConn)
+[    0.122039] musb-hdrc: MHDRC RTL version 2.0 
+[    0.122070] musb-hdrc: setup fifo_mode 4
+[    0.122100] musb-hdrc: 28/31 max ep, 16384/16384 memory
+[    0.122100] musb-hdrc.1: bulk split disabled
+[    0.122100] musb-hdrc.1: bulk combine disabled
+[    0.122192] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    0.122283] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    0.122436] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.122436] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.122467] usb usb1: Product: MUSB HDRC host driver
+[    0.122467] usb usb1: Manufacturer: Linux 3.2.0+ musb-hcd
+[    0.122467] usb usb1: SerialNumber: musb-hdrc.1
+[    0.123413] hub 1-0:1.0: USB hub found
+[    0.123443] hub 1-0:1.0: 1 port detected
+[    0.124053] musb-hdrc musb-hdrc.1: USB Host mode controller at c883e800 using PIO, IRQ 19
+[    0.124481] NET: Registered protocol family 2
+[    0.124725] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.125030] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.125122] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.125183] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.125183] TCP reno registered
+[    0.125213] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.125244] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.125427] NET: Registered protocol family 1
+[    0.125701] RPC: Registered named UNIX socket transport module.
+[    0.125732] RPC: Registered udp transport module.
+[    0.125732] RPC: Registered tcp transport module.
+[    0.125732] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.125976] Trying to unpack rootfs image as initramfs...
+[    0.126220] rootfs image is not initramfs (junk in compressed archive); looks like an initrd
+[    0.298187] Freeing initrd memory: 32768K
+[    0.298217] NetWinder Floating Point Emulator V0.97 (double precision)
+[    0.306671] msgmni has been set to 243
+[    0.309997] alg: No test for stdrng (krng)
+[    0.310821] io scheduler noop registered
+[    0.310852] io scheduler deadline registered
+[    0.310943] io scheduler cfq registered (default)
+[    0.311828] omap_uart.0: ttyO0 at MMIO 0x44e09000 (irq = 72) is a OMAP UART0
+[    0.323059] console [ttyO0] enabled
+[    0.323699] omap_uart.1: ttyO1 at MMIO 0x48022000 (irq = 73) is a OMAP UART1
+[    0.324218] omap_uart.2: ttyO2 at MMIO 0x48024000 (irq = 74) is a OMAP UART2
+[    0.324737] omap_uart.3: ttyO3 at MMIO 0x481a6000 (irq = 44) is a OMAP UART3
+[    0.325225] omap_uart.4: ttyO4 at MMIO 0x481a8000 (irq = 45) is a OMAP UART4
+[    0.325683] omap_uart.5: ttyO5 at MMIO 0x481aa000 (irq = 46) is a OMAP UART5
+[    0.326782] omap4_rng omap4_rng: OMAP4 Random Number Generator ver. 2.00
+[    0.337127] brd: module loaded
+[    0.342742] loop: module loaded
+[    0.342742] hzq:drver name is at24
+[    0.346374] at24 1-0050: 32768 byte 24c256 EEPROM, writable, 64 bytes/write
+[    0.346405] The board is general purpose EVM in profile 0
+[    0.348205] hzq: i2c2_init in
+[    0.351379]  omap_i2c.3: alias fck already exists
+[    0.351806] omap_i2c omap_i2c.3: bus 3 rev2.4.0 at 100 kHz
+[    0.352874]  omap_i2c.2: alias fck already exists
+[    0.353240] omap_i2c omap_i2c.2: bus 2 rev2.4.0 at 40 kHz
+[    0.353637]  davinci-mcasp.1: alias fck already exists
+[    0.354187]  omap_hsmmc.0: alias fck already exists
+[    0.354492]  omap_hsmmc.1: alias fck already exists
+[    0.354766]  omap_hsmmc.2: alias fck already exists
+[    0.355041] Configure Bluetooth Enable pin...
+[    0.355102]  d_can.0: alias fck already exists
+[    0.355682] spi spi2.0: setup mode 3, 8 bits/w, 1000000 Hz max --> 0
+[    0.355957] omap2_mcspi omap2_mcspi.2: registered child spi2.0
+[    0.358337] registered am33xx_sr device
+[    0.364074] ti81xx_interrupt 1146: VBUS error workaround (delay coming)
+[    0.410827] davinci_mdio davinci_mdio.0: davinci mdio revision 1.6
+[    0.410827] davinci_mdio davinci_mdio.0: no live phy, scanning all
+[    0.410980] phy_id:0xC701DE28, addr:0x0
+[    0.411254] davinci_mdio: probe of davinci_mdio.0 failed with error -5
+[    0.411407] PPP generic driver version 2.4.2
+[    0.411926] PPP BSD Compression module registered
+[    0.411926] PPP Deflate Compression module registered
+[    0.412170] usbcore: registered new interface driver zd1201
+[    0.412353] usbcore: registered new interface driver cdc_ether
+[    0.412536] usbcore: registered new interface driver cdc_eem
+[    0.412719] usbcore: registered new interface driver dm9601
+[    0.412780] cdc_ncm: 04-Aug-2011
+[    0.412963] usbcore: registered new interface driver cdc_ncm
+[    0.413146] usbcore: registered new interface driver cdc_acm
+[    0.413177] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    0.413177] Initializing USB Mass Storage driver...
+[    0.413421] usbcore: registered new interface driver usb-storage
+[    0.413421] USB Mass Storage support registered.
+[    0.413818] usbcore: registered new interface driver usbserial
+[    0.413970] USB Serial support registered for generic
+[    0.414154] usbcore: registered new interface driver usbserial_generic
+[    0.414184] usbserial: USB Serial Driver core
+[    0.414337] USB Serial support registered for GSM modem (1-port)
+[    0.414611] usbcore: registered new interface driver option
+[    0.414611] option: v0.7.2:USB Driver for GSM modems
+[    0.415283] mousedev: PS/2 mouse device common for all mice
+[    0.416564] omap_rtc am33xx-rtc: rtc core: registered am33xx-rtc as rtc0
+[    0.416778] i2c /dev entries driver
+[    0.417846] hzq:drver name is lm75
+[    0.422363] lm75 3-0048: hwmon0: sensor 'lm75'
+[    0.581848] OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+[    0.584136] cpuidle: using governor ladder
+[    0.584686] cpuidle: using governor menu
+[    0.589935] Registered led device: led_signal_red
+[    0.590179] Registered led device: led_signal_green
+[    0.590423] Registered led device: led_power_green
+[    0.590637] Registered led device: led_power_red
+[    0.590850] Registered led device: led_data_green
+[    0.591125] Registered led device: led_data_red
+[    0.591339] Registered led device: system-power
+[    0.591552] Registered led device: accelerometer-power
+[    0.591796] Registered led device: acce_reset
+[    0.592010] Registered led device: 5v-power
+[    0.592224] Registered led device: wifi-power
+[    0.592468] Registered led device: gps-power
+[    0.592681] Registered led device: gps-off
+[    0.592895] Registered led device: gps-reset
+[    0.593109] Registered led device: gprs-power-enable
+[    0.593353] Registered led device: gprs-on
+[    0.593566] Registered led device: audio-power
+[    0.593780] Registered led device: eth-power
+[    0.593994] Registered led device: radio-power
+[    0.594238] Registered led device: encrypt-chip
+[    0.594451] Registered led device: uart-s0
+[    0.594665] Registered led device: uart-s1
+[    0.594909] Registered led device: uart-s2
+[    0.595123] Registered led device: uart-s3
+[    0.595336] Registered led device: uart-s4
+[    0.595550] Registered led device: radio-en-dc
+[    0.595764] omap4_aes_mod_init: loading AM33X AES driver
+[    0.595916] omap4-aes omap4-aes: AM33X AES hw accel rev: 3.02
+[    0.596466] omap4_aes_probe: probe() done
+[    0.596740] omap4_sham_mod_init: loading AM33X SHA/MD5 driver
+[    0.596893] omap4-sham omap4-sham: AM33X SHA/MD5 hw accel rev: 4.03
+[    0.602539] omap4_sham_probe: probe() done
+[    0.606170] tiadc tiadc: attached adc driver
+[    0.606323] hzq:  st_magn_i2c_init
+[    0.609893] hzq:drver name is st_magn_i2c
+[    0.614166] hzq: has st_magn_i2c_probe
+[    0.618255] iio iio:device2: failed to read Who-Am-I register.
+[    0.624420] ------------[ cut here ]------------
+[    0.624450] WARNING: at lib/kobject.c:595 kobject_put+0x3c/0x5c()
+[    0.624450] kobject: '(null)' (c4a089b0): is not initialized, yet kobject_put() is being called.
+[    0.624481] Modules linked in:
+[    0.624481] Backtrace: 
+[    0.624511] [<c00166e4>] (dump_backtrace+0x0/0x10c) from [<c034c198>] (dump_stack+0x18/0x1c)
+[    0.624542]  r6:c0192aa4 r5:00000009 r4:c701dd40 r3:60000013
+[    0.624572] [<c034c180>] (dump_stack+0x0/0x1c) from [<c0036e00>] (warn_slowpath_common+0x54/0x6c)
+[    0.624603] [<c0036dac>] (warn_slowpath_common+0x0/0x6c) from [<c0036ebc>] (warn_slowpath_fmt+0x38/0x40)
+[    0.624633]  r8:00000000 r7:c04f8aa0 r6:c4a0a7c0 r5:c4a08810 r4:c4a089b0
+[    0.624633] r3:00000009
+[    0.624664] [<c0036e84>] (warn_slowpath_fmt+0x0/0x40) from [<c0192aa4>] (kobject_put+0x3c/0x5c)
+[    0.624664]  r3:00000000 r2:c043901f
+[    0.624694] [<c0192a68>] (kobject_put+0x0/0x5c) from [<c0097b5c>] (cdev_del+0x2c/0x34)
+[    0.624725]  r4:c4a089b0
+[    0.624755] [<c0097b30>] (cdev_del+0x0/0x34) from [<c026cf54>] (iio_dev_release+0x1c/0x44)
+[    0.624755]  r4:c4a08800 r3:c026cf38
+[    0.624786] [<c026cf38>] (iio_dev_release+0x0/0x44) from [<c01d0290>] (device_release+0x58/0x8c)
+[    0.624786]  r5:c4a08818 r4:c49f40c0
+[    0.624816] [<c01d0238>] (device_release+0x0/0x8c) from [<c0192bcc>] (kobject_release+0x68/0x7c)
+[    0.624816]  r4:c4a08834 r3:c01d0238
+[    0.624847] [<c0192b64>] (kobject_release+0x0/0x7c) from [<c0193e74>] (kref_put+0x60/0x78)
+[    0.624877]  r7:c701de58 r6:c701de58 r5:c0192b64 r4:c4a08834
+[    0.624908] [<c0193e14>] (kref_put+0x0/0x78) from [<c0192ab0>] (kobject_put+0x48/0x5c)
+[    0.624908]  r5:c4a0a800 r4:c4a08818
+[    0.624938] [<c0192a68>] (kobject_put+0x0/0x5c) from [<c01d00b0>] (put_device+0x1c/0x20)
+[    0.624938]  r4:00000001
+[    0.624969] [<c01d0094>] (put_device+0x0/0x20) from [<c026cb04>] (iio_device_free+0x1c/0x20)
+[    0.625000] [<c026cae8>] (iio_device_free+0x0/0x20) from [<c026cb1c>] (devm_iio_device_release+0x14/0x18)
+[    0.625030] [<c026cb08>] (devm_iio_device_release+0x0/0x18) from [<c01d63d4>] (release_nodes+0x19c/0x1c8)
+[    0.625061] [<c01d6238>] (release_nodes+0x0/0x1c8) from [<c01d64a8>] (devres_release_all+0x40/0x48)
+[    0.625061] [<c01d6468>] (devres_release_all+0x0/0x48) from [<c01d3924>] (driver_probe_device+0xf0/0x19c)
+[    0.625091] [<c01d3834>] (driver_probe_device+0x0/0x19c) from [<c01d3a40>] (__driver_attach+0x70/0x94)
+[    0.625122]  r6:c05017f0 r5:c49c0054 r4:c49c0020 r3:00000000
+[    0.625152] [<c01d39d0>] (__driver_attach+0x0/0x94) from [<c01d2810>] (bus_for_each_dev+0x54/0x9c)
+[    0.625152]  r6:c05017f0 r5:c701dee0 r4:00000000 r3:c70068f4
+[    0.625183] [<c01d27bc>] (bus_for_each_dev+0x0/0x9c) from [<c01d3584>] (driver_attach+0x20/0x28)
+[    0.625213]  r7:c04ff484 r6:c0039b38 r5:c49f4140 r4:c05017f0
+[    0.625244] [<c01d3564>] (driver_attach+0x0/0x28) from [<c01d31a8>] (bus_add_driver+0xd4/0x23c)
+[    0.625244] [<c01d30d4>] (bus_add_driver+0x0/0x23c) from [<c01d3f44>] (driver_register+0xa8/0x12c)
+[    0.625274] [<c01d3e9c>] (driver_register+0x0/0x12c) from [<c02475ac>] (i2c_register_driver+0xa4/0xcc)
+[    0.625335] [<c0247508>] (i2c_register_driver+0x0/0xcc) from [<c04a5908>] (st_magn_i2c_init+0x24/0x34)
+[    0.625335]  r5:c04b6410 r4:c04b6310
+[    0.625366] [<c04a58e4>] (st_magn_i2c_init+0x0/0x34) from [<c0008690>] (do_one_initcall+0x9c/0x16c)
+[    0.625396] [<c00085f4>] (do_one_initcall+0x0/0x16c) from [<c0485884>] (kernel_init+0x84/0x120)
+[    0.625427] [<c0485800>] (kernel_init+0x0/0x120) from [<c0039b38>] (do_exit+0x0/0x5f8)
+[    0.625457]  r5:c0485800 r4:00000000
+[    0.625488] ---[ end trace c372577f5146e81a ]---
+[    0.625518] st_magn_i2c: probe of 3-001e failed with error -121
+[    0.630645] hzq:drver name is tlv320aic3x-codec
+[    0.635650] hzq:drver name is wm8960-codec
+[    0.641113] wm8960-codec 1-001a: No platform data supplied
+[    0.671966] mmc0: host does not support reading read-only switch. assuming write-enable.
+[    0.673858] mmc0: new high speed SD card at address 0002
+[    0.674438] mmcblk0: mmc0:0002 N/A   1.85 GiB 
+[    0.676269]  mmcblk0: p1 p2
+[    0.755584] mmc1: new high speed MMC card at address 0001
+[    0.757385] asoc: wm8960-hifi <-> davinci-mcasp.1 mapping ok
+[    0.758331] mmcblk1: mmc1:0001 016G92 14.6 GiB 
+[    0.758483] mmcblk1boot0: mmc1:0001 016G92 partition 1 4.00 MiB
+[    0.758605] mmcblk1boot1: mmc1:0001 016G92 partition 2 4.00 MiB
+[    0.760528]  mmcblk1: p1 p2 p3
+[    0.760955] ALSA device list:
+[    0.760955]   #0: AM335X EVM
+[    0.760986] netem: version 1.3
+[    0.761016] nf_conntrack version 0.5.0 (1946 buckets, 7784 max)
+[    0.761535] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    0.761718] TCP cubic registered
+[    0.761718] NET: Registered protocol family 17
+[    0.761871] Bridge firewalling registered
+[    0.761932] Registering the dns_resolver key type
+[    0.761993] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.762023] ThumbEE CPU extension supported.
+[    0.762268] mux: Failed to setup hwmod io irq -22
+[    0.762268] Power Management for AM33XX family
+[    0.762481] Trying to load am335x-pm-firmware.bin (60 secs timeout)
+[    0.762634] Copied the M3 firmware to UMEM
+[    0.762725] Cortex M3 Firmware Version = 0x181
+[    0.762847] DIEID: 0f02d014 01590540 00000000 19f60000
+[    0.762847] EFUSE SMA register val = 00000000
+[    0.762878] Compensating OPP0: Orig nvalue:0x9a81ee New nvalue:0x9a81ee
+[    0.762878] Compensating OPP1: Orig nvalue:0x9a81ee New nvalue:0x9a81ee
+[    0.765319] Compensating OPP0: Orig nvalue:0x998b85 New nvalue:0x998b85
+[    0.765319] Compensating OPP1: Orig nvalue:0x999086 New nvalue:0x999086
+[    0.765350] Compensating OPP2: Orig nvalue:0xaafce8 New nvalue:0xaafce8
+[    0.765350] Compensating OPP3: Orig nvalue:0xaadac9 New nvalue:0xaadac9
+[    0.766235]  mmcblk1boot1: unknown partition table
+[    0.767181] smartreflex smartreflex: am33xx_sr_probe: Driver initialized
+[    0.768493]  mmcblk1boot0: unknown partition table
+[    0.840576] clock: disabling unused clocks to save power
+[    0.853668] Detected MACID=90:59:af:ce:75:37
+[    0.854827] cpsw: Detected MACID = 90:59:af:ce:75:38
+[    0.856719] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+[    0.857452] omap_rtc am33xx-rtc: setting system clock to 2000-01-01 00:00:01 UTC (946684801)
+[    0.857971] RAMDISK: cramfs filesystem found at block 0
+[    0.858001] RAMDISK: Loading 2816KiB [1 disk] into ram disk... /
+[    0.881378] mmc2: card claims to support voltages below the defined range. These will be ignored.
+[    0.881500] -
+[    0.891876] mmc2: queuing unknown CIS tuple 0x91 (3 bytes)
+[    0.892547] \
+[    0.893035] mmc2: new SDIO card at address 0001
+[    0.893463] done.
+[    0.948272] VFS: Mounted root (cramfs filesystem) readonly on device 1:0.
+[    0.948333] devtmpfs: mounted
+[    0.948669] Freeing init memory: 200K
+[    1.085998] SR 0: curr=1137500, delta_v=-56875, calc=1080625, act=1087500, gain=00
+[    1.089965] SR 1: curr=1262500, delta_v=-63125, calc=1199375, act=1200000, gain=00
+[    1.587432] EXT4-fs (mmcblk1p3): couldn't mount as ext3 due to feature incompatibilities
+[    1.608978] EXT4-fs (mmcblk1p3): couldn't mount as ext2 due to feature incompatibilities
+[    1.647583] EXT4-fs (mmcblk1p3): warning: maximal mount count reached, running e2fsck is recommended
+[    1.648742] EXT4-fs (mmcblk1p3): recovery complete
+[    1.649627] EXT4-fs (mmcblk1p3): mounted filesystem with ordered data mode. Opts: (null)
+[    1.693206] EXT4-fs (mmcblk1p3): couldn't mount as ext3 due to feature incompatibilities
+[    1.702209] EXT4-fs (mmcblk1p3): couldn't mount as ext2 due to feature incompatibilities
+[    1.712585] EXT4-fs (mmcblk1p3): warning: maximal mount count reached, running e2fsck is recommended
+[    1.713592] EXT4-fs (mmcblk1p3): mounted filesystem with ordered data mode. Opts: (null)
+[    2.335357] SR 0: curr=1087500, delta_v=-99994, calc=987506, act=1000000, gain=1d
+[    2.339111] SR 1: curr=1200000, delta_v=-179676, calc=1020324, act=1025000, gain=27
+[    2.731597] Disabling lock debugging due to kernel taint
+[    2.733276] Compat-wireless backport release: compat-wireless-v3.6.8-1-snp
+[    2.733276] Backport based on linux-stable.git v3.6.8
+[    2.733306] compat.git: linux-stable.git
+[    2.812194] usb 1-1: new full-speed USB device number 2 using musb-hdrc
+[    2.918212] cfg80211: Calling CRDA to update world regulatory domain
+[    3.372100] wl12xx: loaded
+[    3.417327] Bluetooth: Core ver 2.16
+[    3.417877] NET: Registered protocol family 31
+[    3.417877] Bluetooth: HCI device and connection manager initialized
+[    3.417907] Bluetooth: HCI socket layer initialized
+[    3.417907] Bluetooth: L2CAP socket layer initialized
+[    3.417938] Bluetooth: SCO socket layer initialized
+[    3.428161] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    3.428192] Bluetooth: BNEP filters: protocol multicast
+[    3.452728] Bluetooth: RFCOMM TTY layer initialized
+[    3.452758] Bluetooth: RFCOMM socket layer initialized
+[    3.452758] Bluetooth: RFCOMM ver 1.11
+[    3.466125] Gpio value is :26
+[    3.481628] WL1271: BT Enable
+[    3.489898] hzq:drver name is mma8x5x
+[    3.595367] SR 1: curr=1025000, delta_v=26637, calc=1051637, act=1062500, gain=27
+[    3.602447] input: FreescaleAccelerometer as /devices/virtual/input/input1
+[    3.609069] mma8x5x device driver probe successfully
+[    3.647003] Bluetooth: HCI UART driver ver 2.2
+[    3.647003] Bluetooth: HCI H4 protocol initialized
+[    3.647033] Bluetooth: HCI BCSP protocol initialized
+[    3.647033] Bluetooth: HCILL protocol initialized
+[    3.647064] Bluetooth: HCIATH3K protocol initialized
+[    4.855407] SR 1: curr=1062500, delta_v=-15249, calc=1047251, act=1050000, gain=27
+[    5.938659] wl12xx: firmware booted (Rev 6.3.10.2.115)
+[    6.204254] SR 1: curr=1050000, delta_v=0, calc=1050000, act=1050000, gain=27
+[    6.619384] wl12xx: down
+[    7.078582] wl12xx: firmware booted (Rev 6.3.10.2.115)
+[    8.803863] wlan0: authenticate with c0:61:18:39:75:6c
+[    8.809112] wlan0: send auth to c0:61:18:39:75:6c (try 1/3)
+[    8.812103] wlan0: authenticated
+[    8.821594] wlan0: associate with c0:61:18:39:75:6c (try 1/3)
+[    8.825012] wlan0: RX AssocResp from c0:61:18:39:75:6c (capab=0x431 status=0 aid=12)
+[    8.832763] wlan0: associated
+[    9.064270] SR 1: curr=1050000, delta_v=0, calc=1050000, act=1050000, gain=27
+[   10.601776] wl12xx: Association completed.
+[   18.351593] usb 1-1: device not accepting address 2, error -110
+[   18.411621] hub 1-0:1.0: unable to enumerate USB device on port 1
+[   18.691619] usb 1-1: new high-speed USB device number 4 using musb-hdrc
+[   18.836822] usb 1-1: New USB device found, idVendor=1bc7, idProduct=0021
+[   18.836853] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   18.836883] usb 1-1: Product: Telit Wireless Module
+[   18.836883] usb 1-1: Manufacturer: Telit wireless solutions
+[   18.836883] usb 1-1: SerialNumber: 351579051329694
+[   18.855895] cdc_acm 1-1:1.0: ttyACM0: USB ACM device

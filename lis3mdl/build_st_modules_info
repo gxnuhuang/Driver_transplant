@@ -1,0 +1,74 @@
+  GEN     /home/gxnuhuang/kernel-am335x-07/out/Makefile
+scripts/kconfig/conf --silentoldconfig Kconfig
+make[2]: `arch/arm/boot/dts/am335x-evm.dtb' is up to date.
+make[2]: `arch/arm/boot/dts/am335x-bone.dtb' is up to date.
+make[2]: `arch/arm/boot/dts/am335x-boneblack.dtb' is up to date.
+make[2]: `arch/arm/boot/dts/am335x-evmsk.dtb' is up to date.
+  CHK     include/config/kernel.release
+  GEN     /home/gxnuhuang/kernel-am335x-07/out/Makefile
+  CHK     include/generated/uapi/linux/version.h
+  Using /home/gxnuhuang/kernel-am335x-07 as source for kernel
+  CHK     include/generated/utsrelease.h
+make[2]: `include/generated/mach-types.h' is up to date.
+  CALL    /home/gxnuhuang/kernel-am335x-07/scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  GZIP    kernel/config_data.gz
+  CHK     kernel/config_data.h
+  UPD     kernel/config_data.h
+  CC      kernel/configs.o
+  LD      kernel/built-in.o
+  LINK    vmlinux
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  LD      init/built-in.o
+  KSYM    .tmp_kallsyms1.o
+  KSYM    .tmp_kallsyms2.o
+  LD      vmlinux
+  SORTEX  vmlinux
+  SYSMAP  System.map
+  OBJCOPY arch/arm/boot/Image
+  Kernel: arch/arm/boot/Image is ready
+  GZIP    arch/arm/boot/compressed/piggy.gzip
+  AS      arch/arm/boot/compressed/piggy.gzip.o
+  LD      arch/arm/boot/compressed/vmlinux
+  OBJCOPY arch/arm/boot/zImage
+  Kernel: arch/arm/boot/zImage is ready
+  CHK     include/config/kernel.release
+  GEN     /home/gxnuhuang/kernel-am335x-07/out/Makefile
+  CHK     include/generated/uapi/linux/version.h
+  Using /home/gxnuhuang/kernel-am335x-07 as source for kernel
+  CHK     include/generated/utsrelease.h
+make[2]: `include/generated/mach-types.h' is up to date.
+  CALL    /home/gxnuhuang/kernel-am335x-07/scripts/checksyscalls.sh
+  CC [M]  drivers/iio/industrialio-triggered-buffer.o
+  CC [M]  drivers/iio/common/st_sensors/st_sensors_i2c.o
+  CC [M]  drivers/iio/common/st_sensors/st_sensors_spi.o
+  CC [M]  drivers/iio/magnetometer/st_magn_core.o
+  CC [M]  drivers/iio/common/st_sensors/st_sensors_core.o
+  CC [M]  drivers/iio/common/st_sensors/st_sensors_buffer.o
+  CC [M]  drivers/iio/common/st_sensors/st_sensors_trigger.o
+  CC [M]  drivers/iio/magnetometer/st_magn_buffer.o
+  CC [M]  drivers/iio/magnetometer/st_magn_i2c.o
+  CC [M]  drivers/iio/magnetometer/st_magn_spi.o
+  LD [M]  drivers/iio/magnetometer/st_magn.o
+  LD [M]  drivers/iio/common/st_sensors/st_sensors.o
+  Building modules, stage 2.
+  MODPOST 134 modules
+  CC      drivers/iio/common/st_sensors/st_sensors.mod.o
+  CC      drivers/iio/common/st_sensors/st_sensors_i2c.mod.o
+  CC      drivers/iio/common/st_sensors/st_sensors_spi.mod.o
+  CC      drivers/iio/industrialio-triggered-buffer.mod.o
+  CC      drivers/iio/magnetometer/st_magn.mod.o
+  CC      drivers/iio/magnetometer/st_magn_i2c.mod.o
+  CC      drivers/iio/magnetometer/st_magn_spi.mod.o
+  LD [M]  drivers/iio/common/st_sensors/st_sensors.ko
+  LD [M]  drivers/iio/common/st_sensors/st_sensors_i2c.ko
+  LD [M]  drivers/iio/industrialio-triggered-buffer.ko
+  LD [M]  drivers/iio/magnetometer/st_magn.ko
+  LD [M]  drivers/iio/common/st_sensors/st_sensors_spi.ko
+  LD [M]  drivers/iio/magnetometer/st_magn_spi.ko
+  LD [M]  drivers/iio/magnetometer/st_magn_i2c.ko

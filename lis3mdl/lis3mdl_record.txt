@@ -21,3 +21,6 @@ $(MAKE) -j $(MAKE_JOBS) -C $(LINUXKERNEL_INSTALL_DIR) ARCH=arm CROSS_COMPILE=$(C
 hbuild_irtk am335x-evm.dtb am335x-evmsk.dtb am335x-bone.dtb am335x-boneblack.dtb
 hbuild_irtk zImage
 hbuild_irtk modules
+
+
+setenv bootcmd 'fatload mmc ${mmcdev} ${rdaddr} cramfs.img;fatload mmc ${mmcdev} ${kloadaddr} ${bootfile};setenv bootargs console=ttyO0,115200n8 lpj=3590144 quiet root=/dev/ram0 rootfstype=cramfs ramdisk_size=65536 initrd=${rdaddr},8M;bootm 0x80007fc0'

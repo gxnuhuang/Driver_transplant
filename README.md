@@ -7,4 +7,5 @@ Driver_transplant
 
 添加mdev_learn记录mdev学习过程
 添加记录3G模块的学习过程
+添加lis3mdl记录lis3mdl磁力计驱动移植过程。
 
